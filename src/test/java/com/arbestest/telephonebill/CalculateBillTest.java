@@ -10,6 +10,7 @@ class CalculateBillTest {
 
     static String csv1 =
             "2,13-01-2020 18:10:15,13-01-2020 18:11:57\n" +
+            "1,13-01-2020 18:10:15,13-01-2020 18:11:57\n" +
             "2,18-01-2020 08:50:20,18-01-2020 08:54:55\n" +
             "3,18-01-2020 08:59:20,18-01-2020 09:10:00\n" +
             "3,18-01-2020 08:59:20,18-01-2020 09:10:00\n";
@@ -73,7 +74,7 @@ class CalculateBillTest {
 
         total = calculateBill.calculate(csv1);
         // vylouceni cisla nejvyssiho hodnoty a test vice radku
-        assertEquals(BigDecimal.valueOf(6.0), total);
+        assertEquals(BigDecimal.valueOf(7.0), total);
     }
 
 }

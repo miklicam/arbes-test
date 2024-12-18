@@ -23,7 +23,7 @@ public class CalculateBill implements TelephoneBillCalculator {
         // spocitej postupne pro kazde cislo
         AtomicReference<BigDecimal> total = new AtomicReference<>(BigDecimal.ZERO);
         map.forEach((bigDecimal, billItems) ->
-            total.set(total.get().add(total.get().add(calculateMapItem(billItems))))
+            total.set((total.get().add(calculateMapItem(billItems))))
         );
 
         return total.get();
